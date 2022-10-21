@@ -1,0 +1,431 @@
+/** Variables **/
+$background-body : url(images/banner-trocadero.jpg);
+/** Mixins **/
+
+@mixin Flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@mixin padding-box2 {
+    .img-box{
+        opacity: 1;
+        width:60%;
+        height: 60%;
+        padding-top: 90px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .txt-box{
+        padding-top: 150px;
+        padding-right: 120px;
+        width: 50%;
+        height: 50%;
+
+    }
+
+
+    .title-box{
+        padding-bottom: 300px;
+        padding-left: 100px;
+
+    }
+}
+
+@mixin padding-box3 {
+   text-align: center;
+   padding-top: 50px;
+}
+
+@mixin padding-box4 {
+    text-align: center;
+
+
+    .img-box{
+        opacity: 1;
+        width:60%;
+        height: 60%;
+        padding-top: 90px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .txt-box{
+        padding-top: 150px;
+        padding-right: 120px;
+        width: 50%;
+        height: 50%;
+
+    }
+
+
+    .title-box{
+        display: inline-flex;
+        padding-bottom: 300px;
+        padding-left: 150px;
+
+    }
+ }
+
+/** General **/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: $background-body;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 90%;
+    color: rgb(54, 54, 54);
+}
+
+
+
+
+
+
+
+/** Box1 = Banner**/
+
+
+#box1{
+    
+
+    h1{
+        font-size: 50px;
+        margin: 0px;
+        padding: 50px;
+        text-align: center;
+        color: rgb(54, 54, 54);
+
+    }
+    
+    h2{
+        font-size: 30px;
+        padding: 50px;
+        text-align: center;
+        color: rgb(54, 54, 54);
+
+    }
+    
+    h5{
+        padding: 50px; 
+        text-align: center; 
+        color: rgb(54, 54, 54);
+
+      
+    }
+
+}
+
+
+/** Box2 = Presentation **/
+
+  
+#box2{
+    @include Flexcenter;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(#fff, rgb(142, 199, 249));
+    @include padding-box2;
+}
+
+/** Box3 = Photos **/
+
+.photos-histoire{
+    background: linear-gradient(rgb(142, 199, 249),#fff );
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    @include padding-box3;
+}
+
+.photos{
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    padding-top: 120px;
+    
+
+ 
+}
+
+div:nth-of-type(4){
+    grid-column: 4/5;
+
+}
+
+
+/** Box4 = Architecture **/
+
+#box4{
+    @include Flexcenter;
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient(#fff, rgb(142, 199, 249));
+    @include padding-box4;
+}
+
+/** Box5 = footer **/
+#box5{
+    @include Flexcenter;
+    height: 100vh;
+    width: 100%;
+    padding-left: 100px;
+    height: 100vh;
+    width: 100%;
+    background-image: $background-body;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+#box5bis{
+    @include Flexcenter;
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(142, 199, 249);
+    padding-top: 300px;
+    padding-left: 100px;
+}
+
+.rond1{
+    position: relative;
+    height: 10vh;
+    width: 5%;
+    background-color:rgb(70, 147, 224);
+    border-radius: 90px;
+    right: 20px;
+
+    
+}
+
+.rond2{
+    position: relative;
+    height: 10vh;
+    width: 5%;
+    background-color:rgb(115, 205, 250);
+    z-index: 1;
+    right: 30px;
+    border-radius: 90px;
+
+    
+}
+
+.rond3{
+    position: relative;
+    height: 10vh;
+    width: 5%;
+    background-color:rgb(70, 224, 203);
+    z-index: 2;
+    left: 50px;
+    border-radius: 90px;
+
+
+    
+}
+
+.rond4{
+    position: relative;
+    height: 10vh;
+    width: 5%;
+    background-color:rgb(33, 105, 177);
+    z-index: 3;
+    left: 40px;
+    border-radius: 90px;
+    
+    
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+
+/** Box5 = Responsive  **/
+
+@mixin responsive {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+   
+    
+}
+
+@mixin responsive2 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 200px;
+    height: 100%;
+    width: 100%;
+
+
+}
+
+
+@mixin responsive3 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+        
+}
+
+
+@mixin responsive4 {
+    h1{
+        padding-right: 150px;
+    }        
+}
+
+
+@mixin responsive4bis {
+   
+    padding-right: 100px;
+
+    
+}
+
+/** Fin Box5  **/
+
+/** Responsive  **/
+
+@media screen and (max-width : 900px) and (min-width : 600px){
+
+
+    #box1{
+       @include responsive;
+
+      } 
+
+
+    #box2{
+        @include responsive2;
+
+        .txt-box{
+            padding-top: 5%;
+            width: 50%;
+           
+
+
+        }
+
+        .title-box{
+            padding-top: 5%;
+            padding-bottom: 10%;
+            padding-left: 3%;
+            font-size: 1.5rem;
+
+        }
+
+        .img-box{
+            width: 70vh;
+            height: 60%;
+            padding-top: 120px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+
+    }
+
+
+    .photos{
+        display: grid;
+        grid-template-rows: 10% 10% 10% 10% ;
+        width: 85%;
+        height: 85vh;
+        padding-top: 20%;
+          
+    }
+
+
+
+    div:nth-of-type(2){
+        grid-column: 5/6;
+        grid-row: -2/-1;
+
+    
+    }
+
+   
+
+    div:nth-of-type(3){
+        grid-column: 1/2;
+        grid-row: 4/5;
+    
+    }
+
+    div:nth-of-type(4){
+        grid-column: 5/6;
+        grid-row: -5/-4;
+    
+    }
+
+    div:nth-of-type(5){
+        grid-column: 3/4;
+        grid-row: 2/3;
+    
+    }
+
+    
+
+   
+    #box4{
+        @include responsive3;
+        .txt-box{
+            padding-bottom: 500px;
+            padding-right: 3%;
+            width: 50%;
+        }
+
+        .title-box{
+            padding-left: 3%;
+            font-size: 1.5rem;
+
+        }
+
+        .img-box{
+            width: 70vh;
+            height: 60%;
+            padding-bottom: 300px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+ 
+       } 
+
+
+
+       #box5{
+        @include responsive4;
+       } 
+
+       #box5bis{
+        @include responsive4bis;
+       } 
+}
+
